@@ -15,13 +15,10 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: Edw");
-    console.log("hi");
+    console.log("Successfully connected to server.");
   });
 
   return conn;
 };
-
-console.log("Connecting ...");
-connect();
 
 module.exports = { connect };
