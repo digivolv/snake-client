@@ -10,8 +10,14 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    conn.write("Hello from client!");
+    conn.write("Name: Ed");
+    conn.end();
   });
+
+  // conn.on("connect", () => {
+  //   console.log("Hello from client!");
+  //   conn.end();
+  // });
 
   conn.on("data", (data) => {
     console.log(`"Server says: ", ${data}`);
